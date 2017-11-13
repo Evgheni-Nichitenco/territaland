@@ -1,0 +1,77 @@
+.sidebar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 300px;
+
+  * {
+    font-size: 12px;
+  }
+  //Menu Home
+  &__block {
+    &_zagolovok {
+      height: 51px;
+      background-image: url('../../../images/17.gif');
+      background-repeat: no-repeat;
+      color: #980005;
+
+      h3 {
+        position: relative;
+        top: 5px;
+        left: 30px;
+        font-family: Book Antiqua, Arial, Verdana;
+        font-size: 20px;
+      }
+    }
+
+    &_telo {
+      background-image: url('../../../images/18.gif');
+      background-repeat: repeat-y;
+      background-size: 300px auto;
+      padding: 1px 10px 1px 10px;
+      min-height: 50px;
+    }
+
+    &_footer {
+      background-image: url('../../../images/19.gif');
+      //background-size: cover;
+      background-repeat: no-repeat;
+      height: 26px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.navbar {
+
+  li {
+    display: block;
+    width: 270px;
+    background: #eae2c5;
+    border: 1px solid #dac380;
+    margin: 3px 5px;
+
+    a {
+      display: block;
+      color: #5c3a0f;
+      font-size: 20px;
+      padding: 8px 0 8px 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      font-family: Book Antiqua, Arial, Helvetica;
+    }
+    a:hover {
+      padding-left: 11px;
+      border-left: 4px solid #7e0404;
+      color: #160202;
+    }
+
+    &:hover {
+      opacity: 0.8;
+      color: black;
+    }
+  }
+}

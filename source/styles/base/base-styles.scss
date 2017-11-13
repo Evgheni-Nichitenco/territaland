@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 12px;
+  font-family: verdana, arial, helvetica;
+}
+
+a:link {text-decoration:none; color: #91090d;}
+a:active {text-decoration:underline; color: #91090d;}
+a:visited {text-decoration:underline; color: #91090d;}
+a:hover {text-decoration:none; color: #FF0000;}
+
+form {
+  padding: 0; margin: 0;
+}
+
+input,
+textarea,
+select {vertical-align:middle; font-size: 8pt; font-family: verdana, arial, helvetica;}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #FBFBD9;
+  background-size: 100% repit;
+  background-image: url("/images/1.jpg");
+  border-top: 10px solid;
+  border-image: url("../images/10.gif") 10 repeat;
+  height: calc(100% - 10px);
+}
+
+.page-wrap {
+  min-height: 100%;
+  // 47 - Отступ снизу, соответствует высоте прибитого футера.
+  margin-bottom: -47px;
+  border-left: 10px solid;
+  border-image: url('/images/12.gif') 10 repeat;
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+footer,
+.page-wrap:after {
+  // Размер "after" и самого футера, они должны обязательно совпадать
+  height: 47px;
+}
+
+.cont-wrap {
+  min-height: 1700px;
+  margin: 30px 340px 10px 30px;
+}

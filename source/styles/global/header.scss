@@ -1,0 +1,102 @@
+.header {
+  display: block;
+
+  &__vivaldi {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #000000;
+  }
+
+  &__img {
+    width: 500px;
+    height: 173px;
+    background-image: url("/images/logo.jpg");
+  }
+
+  &__red-square {
+    position: absolute;
+    left: 375px;
+    top: 50px;
+    width: 157px;
+    height: 157px;
+    background-image: url("/images/3.gif");
+
+    &_terra,
+    &_incognita {
+      display: block;
+      margin-top: 20px;
+      width: 157px;
+      height: 26px;
+      font-size: 22px;
+      font-family: "Times New Roman", serif;
+      color: #fffadf;
+      text-align: center;
+    }
+    &_incognita {
+      margin-top: 0;
+    }
+
+    &_redrik {
+      display: block;
+      width: 157px;
+      margin-top: 10px;
+      font-size: 14pt;
+      font-family: "Book Antiqua", Verdana, Tahoma;
+      font-style: italic;
+      text-align: center;
+      color: #fffadf;
+    }
+
+    &__registratsia {
+      display: block;
+      position: absolute;
+      width: 157px;
+      height: 50px;
+
+      &_reg-01, &_reg-02, &_reg-03 {
+        display: inline-block;
+        height: 27px;
+        width: 27px;
+        margin-left: 10px;
+        margin-top: 10px;
+      }
+
+      &_reg-01 {
+        margin-left: 25px;
+      }
+    }
+  }
+
+  &__black-register {
+    position: absolute;
+    left: 9px;
+    top: 167px;
+    width: 383px;
+    height: 30px;
+    background-image: url("/images/9.gif");
+
+    &_01 {
+      display: inline;
+      position: relative;
+      line-height: 27px;
+
+      &_02 {
+        color: #fffadf;
+        text-align: left;
+        vertical-align: middle;
+        margin-left: 10px;
+        a {
+          color: #EA1218;
+          font-size: 12px;
+        }
+
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
