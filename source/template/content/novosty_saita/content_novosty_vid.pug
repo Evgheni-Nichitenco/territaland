@@ -1,0 +1,17 @@
+.eBlock
+    .eBlock__eTitle
+        <?if($MODER_PANEL$)?>
+        .eBlock__eTitle_ePraviblock-vremia $MODER_PANEL$
+        <?endif?>
+
+        h1.eBlock__eTitle_Name
+            a(href="$ENTRY_URL$") $TITLE$
+
+    <?if($MESSAGE$)?>
+    .eMessage $MESSAGE$
+    <?endif?>
+
+    .eDetails
+        span.e-date
+            span.ed-title &nbsp;Дата&nbsp;
+            span.ed-value(title="$TIME$") $DATE$
