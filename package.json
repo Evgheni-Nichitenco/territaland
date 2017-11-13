@@ -1,0 +1,29 @@
+{
+  "name": "territaland",
+  "version": "1.0.0",
+  "description": "01. Создаем директорию проекта\r 02. Открываем в VSCod папку проекта (или в JB WebStorm)\r 03. Создаем файл .gitignore\r 04. Создаем инициализируем гит:  **git init**\r 05. Делаем первый коммит **First commit**\r 06. Создаем удаленный репозиторий на Гитхабе или Битбукете\r 07. Связываем удаленный и локальный репозитории и делаем первый **push**,\r отправляя первый уже сделанный коммит в удаленный репозиторий.\r 08. Проверка установки Нод: **node -v**\r 09. Иницилизация NPM: **npm init**. При этом в проекте появляется файл package.json\r 10. Установка npm-пакетов. Два варианта:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Evgheni-Nichitenco/territaland.git"
+  },
+  "author": "Nichitenco Evgheni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Evgheni-Nichitenco/territaland/issues"
+  },
+  "homepage": "https://github.com/Evgheni-Nichitenco/territaland#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-ruby-sass": "^2.1.1",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {},
+  "optionalDependencies": {}
+}
