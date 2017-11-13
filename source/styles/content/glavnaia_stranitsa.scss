@@ -1,0 +1,33 @@
+.zagolovok {
+  .zagolovok_razdely-glav {
+    text-align: center;
+    font-size: 18pt;
+    margin-bottom: 10px;
+    color: rgb(103, 30, 0);
+    font-family: Book Antiqua;
+  }
+  h3 {
+    text-align: center;
+    font-size: 14pt;
+    margin-top: -10px;
+    color: rgb(103, 30, 0);
+    font-family: Book Antiqua;
+  }
+}
+
+.telo-icon {
+  text-align: center;
+  a {
+    figure {
+      display: inline-block;
+      vertical-align: bottom;
+      width: 150px;
+      margin-bottom: 20px;
+      text-align: center;
+
+      figcaption {
+        margin-bottom: 3px;
+      }
+    }
+  }
+}
