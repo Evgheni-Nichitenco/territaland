@@ -1,0 +1,18 @@
+article.novosty
+    .hlebnie-kroshki
+        a(href="$HOME_PAGE_LINK$") Главная
+        span &raquo; $DATE_BAR$ &raquo; $ENTRY_NAME$
+    hr
+    .eBlock
+        .eBlock__eTitle
+            .eBlock__eTitle_ePraviblock-vremia $ADD_TIME$ $MODER_PANEL$
+            h1.eBlock__eTitle_Name $ENTRY_NAME$
+
+        .eMessage $MESSAGE$
+
+        .eDetails
+            <?if($TAGS$)?>
+            span.e-tags
+            span.ed-title Теги:
+            span.ed-value $TAGS$
+            <?endif?>
