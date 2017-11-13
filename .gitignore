@@ -1,0 +1,23 @@
+# Файлы IDEA
+.idea/
+
+.vscode/
+
+# Файлы npm
+node_modules/
+npm-debug.lod
+
+# Временные файлы Виндовс
+Thumbs.db
+ehthumbs.db
+Desctop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Папка скомпилированного проекта
+build/
+
+.sass-cache
