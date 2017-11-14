@@ -1,0 +1,19 @@
+article
+    .hlebnie-kroshki
+        a(href="$MODULE_URL$") Криминальное чтиво
+        span &nbsp; &raquo; $DATE_BAR$ &raquo; $ENTRY_NAME$
+    hr
+
+    .eBlock
+        .eBlock__eTitle
+            .eBlock__eTitle_ePraviblock-vremia $ADD_TIME$ $MODER_PANEL$
+            h1.eBlock__eTitle_Name $ENTRY_NAME$
+
+        .eMessage $MESSAGE$
+
+        .eDetails
+            <?if($TAGS$)?>
+            span.e-tags
+            span.ed-title Теги:
+            span.ed-value $TAGS$
+            <?endif?>
