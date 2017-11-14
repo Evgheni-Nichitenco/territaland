@@ -1,0 +1,29 @@
+doctype html
+html(lang='ru')
+    head
+    meta(charset='utf-8')
+    link(rel='stylesheet' href='main.css')
+    //<link rel="stylesheet" href="/_st/my.css">
+    title $CAT_NAME$ <?if($SECTION_NAME$)?>- $SECTION_NAME$<?endif?> - $MODULE_NAME$ - $SITE_NAME$
+    <?$META_DESCRIPTION$?>
+    <?$META_KEYWORDS$?>
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+
+    body
+        //$ADMIN_BAR$
+        .page-wrap
+            //$GLOBAL_AHEADERFIL$
+            include ../../global/header/headerfiles
+            //End Glogbal_Aheader
+
+            .content-wrap
+                include ../../content/katalog_files/content_files_kategorii
+
+            //$GLOBAL_CLEFTERCON$
+            include ../../global/sidebar/sidebar-content
+            //End Global Clefter
+
+        //$GLOBAL_BFOOTER$
+        include ../../global/footer
+        //End Global_Bfooter
