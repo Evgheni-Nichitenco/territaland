@@ -1,0 +1,78 @@
+.uForm.uComForm
+    <?if($USER_LOGGED_IN$)?>
+    span $ERROR$
+    <?if($UNSUBSCRIBE_URL$)?>
+    div.kament-otpiska
+        a(target="_blank" href="$UNSUBSCRIBE_URL$") Отписаться от уведомлений
+    <?endif?>
+
+    .uComForm-inner
+        span.ucf-avatar.uf-with-tooltip
+            <?if($USER_AVATAR_URL$)?>
+            img(src="$USER_AVATAR_URL$" alt="avatar")
+            <?else?>
+            img(src="/images/ava/novoavatar.png" alt="avatar")
+            <?endif?>
+            span.uf-tooltip
+                <?if($PROFILE_URL$)?>
+                a(class="uf-tt-item" href="$PROFILE_URL$" target="_blank") Профиль
+                <?else?>
+                a(class="uf-tt-item" href="#" target="_blank") Профиль
+                <?endif?>
+
+                span.uf-tt-hr
+
+                a(class="uf-tt-item uf-tt-exit" href="#!") Выйти
+
+        .ucf-content
+            <?if($USER_CAN_POST$)?>
+            .uf-form.ucf-form
+                <?if($BBCODES$)?>
+                .ucf-bb
+                    span $BBCODES$
+                <?endif?>
+
+                div
+                    .ucf-table
+                        .ucf-message-wrap
+                            textarea(class="uf-txt-input commFl" name="message" id="message") $MESSAGE$
+
+                .ucf-options
+                    <?if($SUBSCRIBE$)?>
+                    span.uf-with-tooltip.ucf-option
+                        label(class="ucf-option-label ucf-option-subscribe")
+                            input(class="uf-checkbox js-ucf-option" type="checkbox" name="subscribe")
+                            <?if($SUBSCRIBE_BY_DEFAULT$)?>checked<?endif?> //Внести внутрь input!!!
+                        span.uf-tooltip Подписаться на комментарии к материалу
+                    <?endif?>
+
+                div
+                    input(class="commSbmFl uf-btn" id="addcBut" type="submit" name="submit" value="Отправить")
+            <?else?>
+            .myWinError
+                span Вы относитесь к группе пользователей, которым запрещено совершать данное действие.
+            <?endif?>
+
+    <?else?>
+    div(class="uauth-small-links uauth-links-set$IMAGE_SET$")
+        span Войдите: $SOCIAL_BTNS$
+
+    .uComForm-inner
+        span.ucf-avatar
+            img(src="/images/ava/noavatar.png" alt="avatar")
+
+        .ucf-content.ucf-start-content
+            .uf-form.ucf-form
+                textarea(class="uf-txt-input commFl js-start-txt" placeholder="Оставьте ваш комментарий...")
+
+                button(class="uf-btn" onclick="preSaveMessage(); window.open('/index/800?ref='+window.location.href, 'SocialLoginWnd', 'width=500,height=410,resizable=yes,titlebar=yes');")
+                    span Отправить
+
+    <?endif?>
+
+
+
+
+
+
+
