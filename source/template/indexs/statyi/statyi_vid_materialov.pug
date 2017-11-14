@@ -1,0 +1,28 @@
+article
+    .eBlock
+        .eBlock__eTitle
+            <?if($MODER_PANEL$)?>
+            .eBlock__eTitle_ePraviblock-vremia $MODER_PANEL$
+            <?endif?>
+
+            .eBlock__eTitle_Name
+                a(href="$ENTRY_URL$") $TITLE$
+
+        <?if($MESSAGE$)?>
+        .eMessage $MESSAGE$
+        <?endif?>
+
+        .eDetails
+            <?if($CATEGORY_NAME$)?>
+            a(class="e-category" href="$CATEGORY_URL$") $CATEGORY_NAME$
+            span.ed-sep |
+            <?endif?>
+
+            span.e-date
+                span.ed-title &nbsp;Дата&nbsp;
+                span.ed-value(title="$TIME$") $DATE$
+
+            <?if($COMMENTS_URL$)?>
+            span.ed-sep |
+            a(class="e-comments" href="$COMMENTS_URL$") Комментарии ($COMMENTS_NUM$)
+            <?endif?>
