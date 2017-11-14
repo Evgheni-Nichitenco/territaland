@@ -1,0 +1,47 @@
+div(class="$CLASS$ blok_kommentarii")
+    .eBlock__eTitle_ePraviblock-vremia $MODER_PANEL$
+
+    .cTop
+        <?if($IS_OWN$)?>
+        span.myWinError *
+        <?else?>
+        <?if($IS_NEW$)?>
+        <span.myWinSuccess *
+        <?endif?>
+        <?endif?>
+
+        a(href="#ent$ID$" onclick="if (document.getElementById('comEnt$ID$')){$('body').scrollTo( { top:$('#comEnt$ID$').offset().top-22, left:0}, 500 );return false;}" name="ent$ID$")
+            b $NUMBER$
+        span &nbsp;
+        <?if($USERNAME$)?>
+        a(itemprop="author" itemscope itemtype="https://schema.org/Person" href="$PROFILE_URL$")
+            b(itemprop="name") $USERNAME$
+        <?else?>
+        span(itemprop="author" itemscope itemtype="https://schema.org/Person")
+            b(itemprop="name") $NAME$
+        <?endif?>
+
+        span &nbsp;
+        span(class="comment_data" itemprop="datePublished" content="$DATE_FORMATTED$ $TIME$").
+            ($DATE$ $TIME$)
+
+    div(itemprop="reviewBody" class="cMessage")
+    <?if($USER_AVATAR_URL$)?>
+    a(href="$PROFILE_URL$" title="$USERNAME$" class="profil_url")
+        span.user_avatar
+            img(alt="" src="$USER_AVATAR_URL$" class="comment_ava")
+    <?endif?>
+    span.comment_message $MESSAGE$
+
+    <?if($ANSWER$)?>
+    .cAnswer
+        b Ответ:
+        span $ANSWER$
+    <?endif?>
+
+    <?if($ANSWER_URL$)?>
+    .komenti_otvet
+        a(href="$ANSWER_URL$")
+            span Ответить
+
+    <?endif?>
