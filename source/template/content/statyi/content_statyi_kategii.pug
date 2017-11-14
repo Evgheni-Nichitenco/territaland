@@ -1,0 +1,36 @@
+article
+    .hlebnie-kroshki
+        a(href="$HOME_PAGE_LINK$") Главная
+        span &nbsp; &raquo; &nbsp;
+        a(href="$MODULE_URL$") Статьи
+        <?if($SECTION_NAME$)?>
+        span &nbsp; &raquo; &nbsp;
+        a(href="$SECTION_URL$") $SECTION_NAME$
+        <?endif?>
+        span &nbsp; &raquo; $CAT_NAME$
+
+        <?if($ADD_ENTRY_LINK$)?>
+        span.dobavka
+            a(href="$ADD_ENTRY_LINK$") Добавить статью
+        <?endif?>
+        hr
+        span В категории материалов:
+            b $NUM_ENTRIES$
+        <?if($NUM_SHOWN$)?>
+        br
+        span Показано материалов:
+            b $NUM_SHOWN$
+        <?endif?>
+
+        <?if($PAGE_SELECTOR$)?>
+        span.selector.
+            Страницы: $PAGE_SELECTOR$
+        <?endif?>
+        hr
+    .content
+        //$BODY$
+
+    <?if($PAGE_SELECTOR1$)?>
+    div.center
+        span $PAGE_SELECTOR1$
+    <?endif?>
