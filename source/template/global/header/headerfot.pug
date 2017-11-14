@@ -1,0 +1,47 @@
+header.header
+    .header__vivaldi
+    .header__img-fotoalbom
+
+    .header__red-square
+        .header__red-square_terra TERRA
+        .header__red-square_incognita INCOGNITA
+        .header__red-square_redrik Сайт Рэдрика
+        .header__red-square__registratsia
+            .header__red-square__registratsia_reg-01
+                a(href="$HOME_PAGE_LINK$" title="Главная")
+                    img(src="/images/4.gif" alt="Главная")
+
+            .header__red-square__registratsia_reg-02
+                <?if($USERS_ON$)?>
+                <?if($USER_LOGGED_IN$)?>
+                a(href="$PERSONAL_PAGE_LINK$" title="Мой профиль")
+                    img(src="/images/5.gif" alt="Мой профиль")
+
+                <?else?>
+                a(href="$REGISTER_LINK$" title="Регистрация")
+                    img(src="/images/5.gif" alt="Регистрация")
+                <?endif?>
+                <?endif?>
+
+            .header__red-square__registratsia_reg-03
+                <?if($USERS_ON$)?>
+                <?if($USER_LOGGED_IN$)?>
+                a(href="$LOGOUT_LINK$" title="Выход")
+                    img(src="/images/8.gif" alt="Выход")
+                <?else?>
+                a(href="$LOGIN_LINK$" title="Вход")
+                    img(src="/images/8.gif" alt="Вход")
+                <?endif?>
+                <?endif?>
+
+    .header__black-register
+        .header__black-register_01
+            .header__black-register_01_02
+                <?if($USERS_ON$)?>
+                <?if($USER_LOGGED_IN$)?>
+                span Вы вошли как&nbsp;&nbsp;
+                a(href="$PERSONAL_PAGE_LINK$")  $USERNAME$
+                <?else?>
+                span Приветствую Вас, Гость
+                <?endif?>
+                <?endif?>

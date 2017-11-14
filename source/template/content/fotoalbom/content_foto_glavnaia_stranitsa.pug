@@ -1,0 +1,29 @@
+article
+    .cont_hlebnie-kroshki
+        span Фотографий:&nbsp;
+        b $NUM_ENTRIES$
+        span &nbsp; | &nbsp; Альбомов:&nbsp;
+        b $NUM_CATEGORIES$
+
+        <?if($PAGE_SELECTOR$)?>
+        span &nbsp; Страницы: &nbsp; $PAGE_SELECTOR$
+        <?endif?>
+
+
+        <?if($ADD_ENTRY_LINK$)?>
+        span.dobavka
+            a(href="$ADD_ENTRY_LINK$") Добавить фотографии
+        <?endif?>
+        br
+
+        .novie-foto
+            span Новые изображения
+    br
+
+    .content
+        //$BODY$
+
+    hr
+
+    .center
+        span $PAGE_SELECTOR1$
