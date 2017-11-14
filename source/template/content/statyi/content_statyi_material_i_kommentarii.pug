@@ -1,0 +1,64 @@
+article
+    .hlebnie-kroshki
+        a(href="$HOME_PAGE_LINK$") Главная
+        span &nbsp; &raquo; &nbsp;
+        a(href="$MODULE_URL$") Статьи
+        <?if($SECTION_NAME$)?>
+        span &nbsp; &raquo; &nbsp;
+        a(href="$SECTION_URL$") $SECTION_NAME$
+        <?endif?>
+
+        span &nbsp; &raquo; &nbsp;
+        a(href="$CAT_URL$") $CAT_NAME$
+
+        <?if($ADD_ENTRY_LINK$)?>
+        span.dobavka
+            a(href="$ADD_ENTRY_LINK$") Добавить материал
+        <?endif?>
+        hr
+
+    .eBlock
+        .eBlock__eTitle
+            .eBlock__eTitle_ePraviblock-vremia
+                span $ADD_DATE$, $ADD_TIME$
+                <?if($MODER_PANEL$)?>
+                span $MODER_PANEL$
+                <?endif?>
+
+            h1.eBlock__eTitle_Name $ENTRY_TITLE$
+        .eMessage $MESSAGE$
+
+        .eDetails
+            span.ed-title Категория:
+            span.ed-value
+                a(href="$CAT_URL$") $CAT_NAME$
+
+            <?if($TAGS$)?>
+            span.e-tags
+                span.ed-title &nbsp;|&nbsp; Теги:
+                span.ed-value $TAGS$
+            <?endif?>
+
+    <?if($COM_IS_ACTIVE$)?>
+    <?if($COM_CAN_READ$)?>
+    div
+        span Всего комментариев:
+        b $COM_NUM_ENTRIES$
+    div $COM_PAGE_SELECTOR$
+    div $COM_BODY$
+    div $COM_PAGE_SELECTOR1$
+    <?endif?>
+    <?if($COM_CAN_ADD$)?>
+    div $COM_ADD_FORM$
+    <?else?>
+    <?if($USER_LOGGED_IN$)?>
+    <?else?>
+    div.commReg.center
+        span Добавлять комментарии могут только зарегистрированные пользователи.
+        br
+        a(href="$REGISTER_LINK$") Регистрация
+        span |
+        a(href="$LOGIN_LINK$") Вход
+    <?endif?>
+    <?endif?>
+    <?endif?>
