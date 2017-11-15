@@ -1,0 +1,30 @@
+article
+    .hlebnie-kroshki
+        a(href="$HOME_PAGE_LINK$") Главная
+        span &nbsp; &raquo; &nbsp;
+        a(href="$MODULE_URL$") Фотоальбом
+
+        <?if($SECTION_NAME$)?>
+        span &nbsp; &raquo; &nbsp;
+        a(href="$SECTION_URL$") $SECTION_NAME$
+        <?endif?>
+        span &nbsp; &raquo; &nbsp; $CAT_NAME$
+        hr
+
+        <?if($NUM_ENTRIES$)?>
+        span Фотографий в разделе: &nbsp;
+        b $NUM_ENTRIES$
+        <?endif?>
+
+        <?if($PAGE_SELECTOR$)?>
+        .center
+        span Страницы: &nbsp;
+        span $PAGE_SELECTOR$
+        <?endif?>
+        hr
+
+    .content
+        //$BODY$
+
+    .center
+        span $PAGE_SELECTOR1$
