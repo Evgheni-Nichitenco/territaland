@@ -1,0 +1,158 @@
+//<article>
+//<!-- <body> -->
+//<a href="$HOME_PAGE_LINK$">Главная</a> &raquo; <a href="$MODULE_URL$">Фотоальбом</a>
+//<?if($SECTION_NAME$)?>&raquo; <a href="$SECTION_URL$">$SECTION_NAME$</a>
+//<?endif?> &raquo; <a href="$CAT_URL$">$CAT_NAME$</a> &raquo; $PHOTO_NAME$
+//<hr />
+//<div id="u-photos">
+//<div class="uphoto-entry">
+//<h2 class="photo-etitle">$PHOTO_NAME$</h2>
+//<div class="photo-edescr center">
+//$PHOTO_DESCR$
+//    </div>
+//    <div class="u-center">
+//    <div class="photo-block">
+//    <div class="ph-wrap">
+//    <span class="photo-expand">
+//$PHOTO$
+//    <?if($FULL_PHOTO_DIRECT_URL$)?><a class="dd-tip ulightbox" href="$FULL_PHOTO_DIRECT_URL$" target="_blank"><i class="expand-ico"></i><!--<s10014>-->В реальном размере<!--</s>--> <b>$PHOTO_SIZE$</b> / $PHOTO_WEIGHT$Kb</a><?endif?>
+//    </span>
+//    </div>
+//    </div>
+//    <?if($MODER_PANEL$)?><span style="display: block;vertical-align: middle;margin: 10px 0;white-space: nowrap;">$MODER_PANEL$</span>
+//    <?endif?>
+//    </div>
+//    </div>
+//    <div class="photo-slider u-center">
+//    <?if($OTHER_PHOTOS$)?>$NEAR_PHOTOS$
+//    <?endif?>
+//    </div>
+//    </div>
+//    <hr />
+//
+//    <?if($COM_IS_ACTIVE$)?>
+//    <?if($COM_CAN_READ$)?>
+//    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+//    <tr>
+//    <td width="60%" height="25">
+//    <!--<s5183>-->Всего комментариев
+//    <!--</s>-->: <b>$COM_NUM_ENTRIES$</b></td>
+//    <td align="right" height="25">$COM_PAGE_SELECTOR$</td>
+//    </tr>
+//    <tr>
+//    <td colspan="2">$COM_BODY$</td>
+//    </tr>
+//    <tr>
+//    <td colspan="2" align="center">$COM_PAGE_SELECTOR1$</td>
+//    </tr>
+//    <tr>
+//    <td colspan="2" height="10"></td>
+//    </tr>
+//    </table>
+//    <?endif?>
+//
+//    <?if($COM_CAN_ADD$)?>
+//$COM_ADD_FORM$
+//    <?else?>
+//    <?if($USER_LOGGED_IN$)?>
+//    <?else?>
+//    <div align="center" class="commReg">
+//    <!--<s5237>-->Добавлять комментарии могут только зарегистрированные пользователи.
+//    <!--</s>--><br /><a href="$REGISTER_LINK$"><!--<s3089>-->Регистрация<!--</s>--></a> | <a href="$LOGIN_LINK$"><!--<s3087>-->Вход<!--</s>--></a></div>
+//    <?endif?>
+//    <?endif?>
+//    <?endif?>
+//    <!-- </body> -->
+//</article>
+
+
+article
+    .hlebnie-kroshki
+        a(href="$HOME_PAGE_LINK$") Главная
+        span &nbsp; &raquo; &nbsp;
+        a(href="$MODULE_URL$") Фотоальбом
+        <?if($SECTION_NAME$)?>
+        span &nbsp; &raquo; &nbsp;
+        a(href="$SECTION_URL$") $SECTION_NAME$
+        <?endif?>
+        span &nbsp; &raquo; &nbsp;
+        a(href="$CAT_URL$") $CAT_NAME$
+        span &nbsp; &raquo; &nbsp; $PHOTO_NAME$
+        hr
+
+    div(id="u-photos")
+        .uphoto-entry
+            h2.photo-etitle
+                span $PHOTO_NAME$
+            .photo-edescr
+                span $PHOTO_DESCR$
+
+            .u-center
+                .photo-block
+                    .ph-wrap
+                        span.photo-expand $PHOTO$
+
+                        div
+                            <?if($FULL_PHOTO_DIRECT_URL$)?>
+                            a(class="dd-tip ulightbox" href="$FULL_PHOTO_DIRECT_URL$" target="_blank")
+                                <i class="expand-ico">
+                                span В реальном размере &nbsp;
+                                b $PHOTO_SIZE$
+                                span &nbsp; / $PHOTO_WEIGHT$Kb
+                            <?endif?>
+
+                    .photo-edetails.ph-js-details
+                        span.phd-views $REVIEWS$
+                        br
+                        span.phd-comments $COMMENTS_NUM$
+
+                    hr.photo-h
+                    .photo-edetails2
+                        span Добавлено $ADD_DATE$
+
+                <?if($MODER_PANEL$)?>
+                span $MODER_PANEL$
+                <?endif?>
+
+        .photo-slider.u-center
+            <?if($OTHER_PHOTOS$)?>
+            span $NEAR_PHOTOS$
+            <?endif?>
+
+    hr
+
+    <?if($COM_IS_ACTIVE$)?>
+    <?if($COM_CAN_READ$)?>
+    div
+        span Всего комментариев &nbsp;
+        b $COM_NUM_ENTRIES$
+
+        .center
+            span $COM_PAGE_SELECTOR$
+
+            span $COM_BODY$
+
+            span $COM_PAGE_SELECTOR1$
+    <?endif?>
+
+    <?if($COM_CAN_ADD$)?>
+    .center
+        span $COM_ADD_FORM$
+    <?else?>
+
+    <?if($USER_LOGGED_IN$)?>
+    <?else?>
+    .commReg.center
+        span Добавлять комментарии могут только зарегистрированные пользователи.
+        br
+        a(href="$REGISTER_LINK$") Регистрация
+        span &nbsp;|&nbsp;
+        a(href="$LOGIN_LINK$") Вход
+        <?endif?>
+        <?endif?>
+    <?endif?>
+
+
+
+
+
