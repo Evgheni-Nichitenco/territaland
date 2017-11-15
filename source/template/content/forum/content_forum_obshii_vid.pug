@@ -1,0 +1,44 @@
+article
+    .forumContent
+        table(border='0', cellpadding='0', height='30', cellspacing='0', width='100%')
+            tr
+                td(align='right')
+                    a#upml.fNavLink(href='javascript://', rel='nofollow', onclick="window.open('$PM_URL$','pmw','scrollbars=1,top=0,left=0,resizable=1,width=680,height=350');return false;")
+                        // <s3065>
+                        | Личные сообщения
+                        // </s>
+                        | ($UNREAD_PM$)
+                    |                     ·
+                    script(type='text/javascript').
+                        function flashit(id, cl) {
+                            var c = document.getElementById(id);
+                            if (c.style.color == 'red') {
+                                c.style.color = cl;
+                            } else {
+                                c.style.color = 'red';
+                            }
+                        }
+                        setInterval("flashit('upml','')", 500)
+                    bgsound(src='/.s/img/fr/pm.wav', loop='1', volume='0', balance='0')
+                        a.fNavLink(href='$RECENT_POSTS_LINK$', rel='nofollow')
+                            // <s5209>
+                            | Новые сообщения
+                            // </s>
+                        |  ·
+                        a.fNavLink(href='$MEMBERS_LIST_LINK$', rel='nofollow')
+                            // <s5216>
+                            | Участники
+                            // </s>
+                        |  ·
+                        a.fNavLink(href='$SEARCH_PAGE_LINK$', rel='nofollow')
+                            // <s3163>
+                            | Поиск
+                            // </s>
+                        |  ·&nbsp;
+                        a.fNavLink(href='$RSS_LINK$', rel='nofollow') RSS
+                        | &nbsp;·
+                        a.fNavLink(href='$SUBSCRIPTION_LINK$', rel='nofollow')
+                            // <s6773>
+                            | Подписки
+                            // </s>
+        |     $BODY$
