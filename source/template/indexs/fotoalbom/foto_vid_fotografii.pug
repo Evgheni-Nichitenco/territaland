@@ -1,50 +1,17 @@
-//<span class="uphoto">
-//<span class="photo-title"><a href="$PHOTO_URL$">$PHOTO_NAME$</a></span>
-//<span class="photo-block">
-//<span class="ph-wrap">
-//<span class="ph-tc">$PHOTO$</span>
-//<a href="$PHOTO_LIGHTBOX_URL$" data-url="$PHOTO_URL$" class="ph-link" title="Размеры: $PHOTO_SIZE$, $PHOTO_WEIGHT$Kb">
-//<span class="ph-tc">
-//<span class="ph-data">
-//<span class="ph-date">$DATE$</span>
-//<span class="ph-descr"><?if(len($PHOTO_DESCR$)>120)?><?substr($PHOTO_DESCR$,0,117)?>...<?else?>$PHOTO_DESCR$<?endif?></span>
-//</span>
-//</span>
-//</a>
-//</span>
-//<span class="ph-details ph-js-details">
-//<?if($MODER_PANEL$)?><span style="position: absolute;z-index: 100;left: 15px;white-space: nowrap;">$MODER_PANEL_RIGHT$</span><?endif?>
-//<?if($COMMENTS_URL$)?><a href="$COMMENTS_URL$" class="phd-comments">$COMMENTS_NUM$</a><?endif?>
-//</span>
-//</span>
-//</span>
-
-
-
 span.uphoto
     span.photo-title
-        a(href="$PHOTO_URL$") $PHOTO_NAME$
-
+        a(href='$PHOTO_URL$') $PHOTO_NAME$
     span.photo-block
         span.ph-wrap
             span.ph-tc $PHOTO$
-            a(href="$PHOTO_LIGHTBOX_URL$" data-url="$PHOTO_URL$" class="ph-link" title="Просмотры: $REVIEWS$ | Размеры: $PHOTO_SIZE$, $PHOTO_WEIGHT$Kb")
+            a.ph-link(href='$PHOTO_LIGHTBOX_URL$', data-url='$PHOTO_URL$', title='Размеры: $PHOTO_SIZE$, $PHOTO_WEIGHT$Kb')
                 span.ph-tc
                     span.ph-data
                         span.ph-date $DATE$
-
-                        span.ph-desc <?if(len($PHOTO_DESCR$)>120)?><?substr($PHOTO_DESCR$,0,117)?>...<?else?>$PHOTO_DESCR$<?endif?>
-
-                        span(class="ph-author" href="$PROFILE_URL$") $USER$
-
+                        span.ph-descr
+                            | 120)?>
+                            | ...
+                            | $PHOTO_DESCR$
         span.ph-details.ph-js-details
-            <?if($MODER_PANEL$)?>
-            span(style="position: absolute;z-index: 100;left: 15px;white-space: nowrap;") $MODER_PANEL_RIGHT$
-            <?endif?>
-
-            span.phd-views $REVIEWS$
-
-            <?if($COMMENTS_URL$)?>
-            a(href="$COMMENTS_URL$" class="phd-comments") $COMMENTS_NUM$
-            <?endif?>
-
+            span(style='position: absolute;z-index: 100;left: 15px;white-space: nowrap;') $MODER_PANEL_RIGHT$
+            a.phd-comments(href='$COMMENTS_URL$') $COMMENTS_NUM$
