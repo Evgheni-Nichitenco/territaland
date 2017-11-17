@@ -1,0 +1,23 @@
+//<td class="threadIcoTd" align="center" width="4%">
+//<img alt="" style="margin:0;padding:0;vertical-align:middle;border:0;max-width:60px;max-height:60px;" src="$THREAD_ICON$" title="$THREAD_STATE$" />
+//</td>
+//<td class="threadIcoTd" align="center" width="4%">
+//<img alt="" style="margin:0;padding:0;vertical-align:middle;border:0;max-width:60px;max-height:60px;" src="$THREAD_TYPE_ICON$" title="$THREAD_TYPE_STATE$" />
+//</td>
+//<td class="threadNametd">
+//<a class="<?if($IS_PINNED$)?>threadPinnedLink<?else?>threadLink<?endif?>" href="$THREAD_URL$">$THREAD_TITLE$</a>
+//<?if($PAGE_SWITHCES$)?> <span class="postpSwithces">[$PAGE_SWITHCES$]</span><?endif?>
+//<?if($EDIT_BUTTON$)?>$EDIT_BUTTON$<?endif?>
+//<?if($DELETE_BUTTON$)?>$DELETE_BUTTON$<?endif?>
+//<?if($THREAD_DESCRIPTION$)?><div class="threadDescr">$THREAD_DESCRIPTION$</div><?endif?>
+//<?if($FORUM_TITLE$)?><div class="threadFrmBlock">[<span class="threadFrmName" style="padding:0 1px;"><a href="$FORUM_URL$" class="threadFrmLink">$FORUM_TITLE$</a></span>]</div><?endif?>
+//</td>
+//<?if($SUBSCRIBE$)?><td class="threadNametd">$SUBSCRIBE$</td><?endif?>
+//<td class="threadPostTd" align="center">$THREAD_POSTS$</td>
+//<?if($SHOW_VIEWS$)?><td class="threadViewTd" align="center">$THREAD_VIEWS$</td><?endif?>
+//<td class="threadAuthTd" align="center">$THREAD_AUTHOR$</td>
+//<td class="threadLastPostTd">
+//<script type="text/javascript">document.write('<a title="К последнему сообщению" class="forumLastPostLink" hr'+'ef="$LAST_POST_LINK$">$LAST_POST_DATE$</a>')</script>
+//<script type="text/javascript">document.write('<a hr'+'ef="$FIRST_POST_LINK$"><img alt="" style="margin:0;padding:0;vertical-align:middle;border:0;max-width:60px;max-height:60px;" title="К первому непрочитанному сообщению" src="$FIRST_POST_ICON$" /></a>')</script>
+//<br>Сообщение от: <span class="<?if($GUEST_MSG$)?>lastPostGuest<?else?>lastPostUser<?endif?>"><?if($LAST_POST_AUTHOR_PROFILE$)?>$LAST_POST_AUTHOR_PROFILE$<?else?>$LAST_POST_AUTHOR$<?endif?></span>
+//</td>

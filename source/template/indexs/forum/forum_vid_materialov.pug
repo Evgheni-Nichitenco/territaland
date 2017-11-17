@@ -1,0 +1,51 @@
+.forum-vid
+    .forumIcoTd
+        img(alt="" style="margin:0;padding:0;vertical-align:middle;border:0;max-width:60px;max-height:60px;" src="<?if($NEW_MESSAGES$)?>$ICON_NEW$<?else?>$ICON_NONEW$<?endif?>" title="<?if($NEW_MESSAGES$)?><?if($PRIVATE$)?>Приватный форум. <?endif?>Есть новые сообщения<?else?><?if($PRIVATE$)?>Приватный форум. <?endif?>Нет новых сообщений<?endif?>")
+
+    .forumNameTd
+        a(class="forum" href="$FORUM_URL$") $FORUM_TITLE$
+
+        <?if($ARCHIVE$)?>
+        span.forumArchive Архив
+        <?endif?>
+
+        <?if($VIEWERS$)?>
+        span.forumViewed (просматривают: $VIEWERS$)
+        <?endif?>
+
+        .forumDescr
+            span $FORUM_DESCRIPTION$
+
+        <?if($SUBFORUMS$)?>
+        .subforumDescr
+            span Подфорумы: $SUBFORUMS$
+        <?endif?>
+
+    .forumThreadTd
+        span $FORUM_THREADS$
+
+    .forumPostTd
+        span $FORUM_POSTS$
+
+    .forumLastPostTd
+        <?if($FORUM_THREADS$)?>
+        script(type="text/javascript") document.write('<a title="К последнему сообщению" class="forumLastPostLink" hr' + 'ef="$LAST_POST_LINK$">$LAST_POST_DATE$</a>')
+
+        script(type = "text/javascript") document.write('<a hr' + 'ef="$FIRST_POST_LINK$"><img alt="" style="margin:0;padding:0;vertical-align:middle;border:0;max-width:60px;max-height:60px;" title="К первому непрочитанному сообщению" src="$FIRST_POST_ICON$" /></a>')
+
+        br
+        span Тема:
+        a(class="forumLastPostLink" href="$LAST_POST_THREAD_LINK$") $LAST_POST_THREAD_NAME$
+
+        br
+        span Сообщение от:
+        span(class="<?if($GUEST_MSG$)?>lastPostGuest<?else?>lastPostUser<?endif?>")
+            <?if($LAST_POST_AUTHOR_PROFILE$)?>
+            span $LAST_POST_AUTHOR_PROFILE$
+            <?else?>
+            span $LAST_POST_AUTHOR$
+            <?endif?>
+
+        <?else?>
+        span Нет сообщений
+        <?endif?>

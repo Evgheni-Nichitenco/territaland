@@ -100,7 +100,7 @@ a.threadLink:active {text-decoration:underline; color:#000000;}
 .postRest2 {background:#FDFCF4;}
 .postSeparator {height:3px;background:#B5AF80;}
 
-.postTdTop {background:#AD090E;color:#FFFADF;height:20px;font-size:10px;}
+.postTdTop {background:#AD090E;color:#FFFADF;height:20px;font-size:10px; padding-left: 10px}
 .postBottom {background:#FFFADF;height:20px}
 .postUser {font-weight:bold;}
 .postTdInfo {background:url('http://src.ucoz.ru/t/381/16.jpg');text-align:center;padding:5px;}
@@ -150,3 +150,21 @@ a.threadLink:active {text-decoration:underline; color:#000000;}
 /* ----------------- */
 
 /* ====== forum End ====== */
+
+.forumContent {
+  padding-right: 15px;
+  padding-bottom: 10px;
+}
+#subscribe {
+
+  a {
+    color: #D9B627;
+  }
+}
+
+/* Other Styles - Стиль страницы перенаправления при ответе*/
+.replaceTable {background:#FDFCF4;height:100px;width:300px;border:1px solid #D9B627; margin-left: auto; margin-right: auto;}
+.replaceBody {background:url('/images/1.jpg') #FBFBD9;}
+
+.legendTd {font-size:7pt;}
+/* ------------ */

@@ -1,10 +1,11 @@
 * {
   margin: 0;
   padding: 0;
-  border: 0;
   font-size: 12px;
   font-family: verdana, arial, helvetica;
 }
+
+a, img { outline: none; }
 
 a:link {text-decoration:none; color: #91090d;}
 a:active {text-decoration:underline; color: #91090d;}
@@ -54,7 +55,7 @@ footer,
 
 .content-wrap {
   min-height: 1700px;
-  margin: 30px 340px 10px 30px;
+  margin: 35px 335px 10px 25px;
 }
 
 article {
