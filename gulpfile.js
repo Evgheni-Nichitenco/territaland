@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const pug = require('gulp-pug');
-const sass = require('gulp-ruby-sass');
+const sass = require('gulp-sass');
 const rimraf = require('rimraf');
 const autoprefixer = require('gulp-autoprefixer');
 
@@ -26,12 +26,12 @@ gulp.task('templates:compile', function buildHTML() { // Задача Галпа
         .pipe(gulp.dest('build')) // Указание, куда будет складываться скомпилированный код
 });
 
-/*--------- Saas-компилятор ----------*/
-gulp.task('styles:compile', () =>
-sass('source/styles/main.scss')
-    .on('error', sass.logError)
-    .pipe(gulp.dest('build'))
-);
+// SASS compile
+gulp.task('styles:compile', function () { // Вместо SASS вприсано styles:compile
+    return gulp.src('source/styles/main.scss') // Точка входа. Откуда брать файл для компиляции
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('build'));
+});
 
 /*---------- Копирование картинок в папку buid -------*/
 gulp.task('copy:images', function() {
